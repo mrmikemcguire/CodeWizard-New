@@ -1,6 +1,6 @@
-var ngDemo = angular.module('ngDemo', ['ngRoute']);
+var CW = angular.module('CW', ['ngRoute']);
 
-ngDemo.config(function($routeProvider) 
+CW.config(function($routeProvider) 
     {
     $routeProvider
         .when('/', 
@@ -25,18 +25,18 @@ ngDemo.config(function($routeProvider)
 			  });
 	});
 
-ngDemo.controller('mainController', function($scope) 
+CW.controller('mainController', function($scope) 
     {
     $scope.message = 'See what cool things Angular can do!';
 	});
 
-ngDemo.controller('costController', function($scope) 
+CW.controller('costController', function($scope) 
     {
     $scope.quantity = 1;
     $scope.price = 9.99;
 	});
 
-ngDemo.controller('arrayController', function($scope)
+CW.controller('arrayController', function($scope)
     {
     $scope.characters =
         [
@@ -58,7 +58,7 @@ ngDemo.controller('arrayController', function($scope)
         ];
    });
 
-ngDemo.controller('inputController', function($scope) 
+CW.controller('inputController', function($scope) 
     {
     $scope.firstName = "";
     $scope.lastName = "";
@@ -67,6 +67,15 @@ ngDemo.controller('inputController', function($scope)
         return $scope.firstName + " " + $scope.lastName;
         }
 	});
+
+CW.directive('shakespeareInsult', function()
+    {
+    return
+        {
+        templateUrl: 'pages/insult.html',
+        replace: true
+        } 
+    });
 
 $(document).on('click','.navbar-collapse.in',function(e)
     {
