@@ -1,3 +1,4 @@
+alert("We are inside insultscript at least...");
 var insult = document.getElementById("button");
  
 insult.addEventListener("click", function()

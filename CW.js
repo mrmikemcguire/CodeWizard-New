@@ -8,10 +8,10 @@ CW.config(function($routeProvider)
               templateUrl : 'pages/home.html',
               controller  : 'mainController'
 			  })
-        .when('/cost', 
+        .when('/insult', 
               {
-              templateUrl : 'pages/cost.html',
-              controller  : 'costController'
+              templateUrl : 'pages/insult.html',
+              controller  : 'insultController'
 			  })
             .when('/array', 
               {
@@ -30,11 +30,10 @@ CW.controller('mainController', function($scope)
     $scope.message = 'See what cool things Angular can do!';
 	});
 
-CW.controller('costController', function($scope) 
-    {
-    $scope.quantity = 1;
-    $scope.price = 9.99;
-	});
+//CW.controller('insultController', function($scope) 
+//    {
+//    $scope.message = 'The insult program';
+//	});
 
 CW.controller('arrayController', function($scope)
     {
@@ -68,14 +67,14 @@ CW.controller('inputController', function($scope)
         }
 	});
 
-CW.directive('shakespeareInsult', function()
-    {
-    return
-        {
-        templateUrl: 'pages/insult.html',
-        replace: true
-        } 
-    });
+//CW.directive('shakespeareInsult', function()
+//    {
+//    return
+//        {
+//        templateUrl: 'pages/insult.html',
+//        replace: true
+//        } 
+//    });
 
 $(document).on('click','.navbar-collapse.in',function(e)
     {
